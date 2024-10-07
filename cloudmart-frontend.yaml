@@ -1,4 +1,3 @@
-apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cloudmart-frontend-app
@@ -11,11 +10,11 @@ spec:
     metadata:
       labels:
         app: cloudmart-frontend-app
-    spec:
+    spcontainers:
       serviceAccountName: cloudmart-pod-execution-role
       containers:
       - name: cloudmart-frontend-app
-        image: public.ecr.aws/i9z3f2x9/cloudmart-frontend:latest
+        image: CONTAINER_IMAGE
 ---
 
 apiVersion: v1
